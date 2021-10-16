@@ -1,12 +1,11 @@
 export const colors = {
-    primary: {
-        peach: "hsl(11, 73%, 66%)",
-        black: "hsl(270, 3%, 11%)",
-        white: "hsl(0, 0%, 100%)"
-    },
-    secondary:{
-        peach: "hsl(11, 100%, 80%)",
-        black: "hsl(264, 5%, 20%)",
-        white: "hsl(210, 17%, 95%)"
-    }
-}
+  red: '#FF6774',
+  blue: '#006AFF',
+  lightBlue: '#DCEAFF',
+  collapse: '#E9EEF4',
+  white: '#FFFFFF',
+  gray: '#F5F6FA',
+  gray02: '#E4E9EF',
+  gray03: '#A5B4CB',
+  black: '#141737',
+};

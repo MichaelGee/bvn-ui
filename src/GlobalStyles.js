@@ -1,75 +1,30 @@
-import JostBlack from './assets/fonts/Jost-Black.ttf';
-import JostBold from './assets/fonts/Jost-Bold.ttf';
-import JostExtraBold from './assets/fonts/Jost-ExtraBold.ttf';
-import JostExtraLight from './assets/fonts/Jost-ExtraLight.ttf';
-import JostLight from './assets/fonts/Jost-ExtraLight.ttf';
-import JostMedium from './assets/fonts/Jost-Medium.ttf';
-import JostRegular from './assets/fonts/Jost-Regular.ttf';
-import JostSemiBold from './assets/fonts/Jost-SemiBold.ttf';
-import JostThin from './assets/fonts/Jost-Thin.ttf';
+import DMSansBold from './assets/fonts/DMSans-Bold.ttf';
+// import DMSansBoldItalic from './assets/fonts/DMSans-BoldItalic.ttf';
+import DMSansMedium from './assets/fonts/DMSans-Medium.ttf';
+// import DMSansItalic from './assets/fonts/DMSans-Italic.ttf';
+// import DMSansMediumItalic from './assets/fonts/DMSans-MediumItalic.ttf';
+import DMSansRegular from './assets/fonts/DMSans-Regular.ttf';
 import {css} from '@emotion/react';
 
 const globalStyle = css`
   @font-face {
-    font-family: 'Jost';
-    font-weight: 900;
-    src: url(${JostBlack}) format('truetype');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Jost';
-    font-weight: 700;
-    src: url(${JostBold}) format('truetype');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Jost';
-    font-weight: 800;
-    src: url(${JostExtraBold}) format('truetype');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Jost';
-    font-weight: 200;
-    src: url(${JostExtraLight}) format('truetype');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Jost';
-    font-weight: 300;
-    src: url(${JostLight}) format('truetype');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Jost';
-    font-weight: 500;
-    src: url(${JostMedium}) format('truetype');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Jost';
+    font-family: 'DM Sans';
     font-weight: 400;
-    src: url(${JostRegular}) format('truetype');
+    src: url(${DMSansRegular}) format('truetype');
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Jost';
-    font-weight: 600;
-    src: url(${JostSemiBold}) format('truetype');
+    font-family: 'DM Sans';
+    font-weight: 700;
+    src: url(${DMSansBold}) format('truetype');
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'Jost';
-    font-weight: 100;
-    src: url(${JostThin}) format('truetype');
+    font-family: 'DM Sans';
+    font-weight: 500;
+    src: url(${DMSansMedium}) format('truetype');
     font-display: swap;
   }
 
@@ -153,7 +108,7 @@ const globalStyle = css`
   }
 
   body {
-    font-family: 'Jost', sans-serif;
+    font-family: 'DM Sans';
     font-size: 1.6rem;
     line-height: 26px;
     scroll-behavior: smooth;
