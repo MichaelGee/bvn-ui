@@ -15,6 +15,7 @@ const Selector = styled.select`
   padding-right: 53px;
   cursor: pointer;
   border-radius: 12px;
+  font-size: 12px;
 `;
 
 const Title = styled.p`
