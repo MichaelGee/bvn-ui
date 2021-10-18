@@ -1,4 +1,5 @@
 import {Button} from 'components/atoms/Buttons/Button';
+import {SelectButton} from 'components/atoms/Buttons/SelectButton';
 import React, {useRef} from 'react';
 import Box from 'ui-box';
 
@@ -36,6 +37,29 @@ export const Tab = ({
   );
 };
 
+export const ButtonTab = ({
+  text,
+  active,
+  onClick,
+}) => {
+  return (
+    <Box
+      display='flex'
+      alignItems='center'
+      marginRight='2rem'
+      onClick={onClick}
+      cursor='pointer'
+    >
+      <SelectButton
+        active={active}
+        onClick={onClick}
+      >
+        {text}
+      </SelectButton>
+    </Box>
+  );
+};
+
 export const Tabs = ({
   selectedTab,
   onChange,
@@ -58,10 +82,6 @@ export const Tabs = ({
   return (
     <TabHeaderContainer ref={containerRef}>
       <TabsHolder>{tabs}</TabsHolder>
-      {/* <TabSlider
-        width={sliderWidth}
-        index={selectedTab}
-      /> */}
     </TabHeaderContainer>
   );
 };

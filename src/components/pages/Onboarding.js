@@ -8,7 +8,9 @@ import {
   Tabs,
   Tab,
   TabPanel,
+  ButtonTab,
 } from 'components/organisms/Tabs/Tabs';
+import {VerifyAccountTab} from 'components/organisms/TabContents/VerifyAccountTab';
 
 const Image = styled.img`
   width: 80rem;
@@ -39,10 +41,57 @@ const TabsContainer = styled.div`
 
 const TabPanelContainer = styled.div``;
 
+const Steps = styled.p`
+  color: ${({theme}) => theme.colors.gray3};
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 200;
+  opacity: 0.5;
+  margin: 40px 0 19px 0;
+`;
+
+const Bottom = styled(Box)`
+  border-top: 1px solid #e9eef4;
+  padding: 3rem 0;
+`;
+
+const TabTitle = styled.h1`
+  font-size: 26px;
+  line-height: 34px;
+  color: ${({theme}) => theme.colors.black};
+  font-weight: bold;
+`;
+
 const Onboarding = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(0);
   const handleChange = (e, value) => {
     setActiveTab(value);
+  };
+
+  const changeTitle = () => {
+    switch (activeTab) {
+      case 0:
+        return 'Verify Account';
+      case 1:
+        return 'Social Handles';
+      case 2:
+        return 'Business Category';
+      default:
+        break;
+    }
+  };
+
+  const changeStep = () => {
+    switch (activeTab) {
+      case 0:
+        return 1;
+      case 1:
+        return 2;
+      case 2:
+        return 3;
+      default:
+        break;
+    }
   };
 
   return (
@@ -72,25 +121,28 @@ const Onboarding = () => {
               label='1'
               text='Verify Account'
               value={0}
-            ></Tab>
+            />
             <Tab
               label='2'
               text='Social Handles'
               value={1}
-            ></Tab>
+            />
             <Tab
               label='3'
               text='Business Category'
               value={2}
-            ></Tab>
+            />
           </Tabs>
         </TabsContainer>
+        <Steps>Step {changeStep()}/3</Steps>
+        <TabTitle>{changeTitle()}</TabTitle>
+        {/* Tabs */}
         <TabPanelContainer>
           <TabPanel
             value={activeTab}
             selectedIndex={0}
           >
-            <h1>Tab 1</h1>
+            <VerifyAccountTab />
           </TabPanel>
           <TabPanel
             value={activeTab}
@@ -105,7 +157,13 @@ const Onboarding = () => {
             <h1>Tab 3</h1>
           </TabPanel>
         </TabPanelContainer>
-        <Collapse />
+        <Bottom
+          display='flex'
+          justifyContent='space-between'
+        >
+          <Box />
+          <Button color='blue'>Continue</Button>
+        </Bottom>
       </Right>
     </Box>
   );

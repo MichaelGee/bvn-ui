@@ -4,18 +4,15 @@ import KaratIcon from '../icons/Karat';
 import styled from '@emotion/styled';
 
 const Selector = styled.select`
-  padding: 2rem 1rem;
   -webkit-appearance: none;
   width: 100%;
-  flex: 1;
-  line-height: 16px;
   outline: none;
-  border: 1px solid #c1c4d6;
-  padding-left: 26px;
-  padding-right: 53px;
+  border: 1px solid
+    ${({theme}) => theme.colors.gray02};
+  padding: 12px 5rem 12px 3rem;
   cursor: pointer;
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 1.5rem;
 `;
 
 const Title = styled.p`
@@ -28,11 +25,9 @@ const Title = styled.p`
 export const Select = ({children, title}) => {
   return (
     <Box
-      display='inline-flex'
-      flex={1}
       position='relative'
-      width='auto'
       cursor='pointer'
+      width='100%'
     >
       <Box display='flex' flexDirection='column'>
         <Title>{title}</Title>
@@ -41,7 +36,7 @@ export const Select = ({children, title}) => {
       <Box
         color='default'
         position='absolute'
-        top='50%'
+        top='40%'
         right='8px'
         paddingX='1.3rem'
         cursor='pointer'

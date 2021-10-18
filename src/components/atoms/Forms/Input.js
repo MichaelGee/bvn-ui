@@ -3,11 +3,12 @@ import styled from '@emotion/styled';
 import Box from 'ui-box';
 
 const InputComponent = styled.input`
-  width: auto;
+  width: 100%;
   border: 1px solid
     ${({theme}) => theme.colors.gray02};
-  padding: 16px 17px;
+  padding: 12px 17px;
   border-radius: 12px;
+  font-size: 1.5rem;
   color: ${({theme}) => theme.colors.black};
   &:focus {
     border: 1px solid
@@ -22,11 +23,18 @@ const Title = styled.p`
   font-weight: 500;
 `;
 
-export const Input = ({placeholder, title}) => {
+export const Input = ({
+  placeholder,
+  title,
+  props,
+}) => {
   return (
-    <Box>
+    <Box width='100%'>
       <Title>{title}</Title>
-      <InputComponent placeholder={placeholder} />
+      <InputComponent
+        placeholder={placeholder}
+        {...props}
+      />
     </Box>
   );
 };
