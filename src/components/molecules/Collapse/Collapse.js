@@ -12,6 +12,7 @@ const Container = styled.div`
   padding: 3rem;
   line-height: 16px;
   border-radius: 5px;
+  width: 100%;
 `;
 const QuestionText = styled.p`
   color: ${({theme}) => theme.colors.black};
@@ -58,7 +59,6 @@ const Footer = styled.div`
 
 export const Collapse = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen);
 
   const toggleHide = () => {
     setIsOpen((v) => !v);
@@ -91,7 +91,9 @@ export const Collapse = () => {
             cursor='pointer'
             onClick={toggleHide}
           >
-            <HideText>Hide</HideText>
+            <HideText>
+              {isOpen ? 'Hide' : 'Show'}
+            </HideText>
             <ArrowIcon />
           </Box>
         </Box>

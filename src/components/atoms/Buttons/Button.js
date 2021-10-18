@@ -4,7 +4,7 @@ import css from '@emotion/css';
 export const Button = styled.button`
   border: none;
   text-decoration: none;
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 3rem;
   font-size: 14px;
   line-height: 22px;
   background: ${(props) =>

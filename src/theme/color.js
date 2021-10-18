@@ -9,4 +9,5 @@ export const colors = {
   gray03: '#A5B4CB',
   black: '#141737',
   purple: '#5257F5',
+  cream: '#F3E8C9',
 };
