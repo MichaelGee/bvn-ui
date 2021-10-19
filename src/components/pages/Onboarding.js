@@ -35,7 +35,7 @@ const Right = styled(Box)`
   width: 100%;
   padding: 6rem 10rem;
   ${({theme}) => theme.mq.lg`
-    padding: 4rem 3rem;
+    padding: 4rem 2rem;
   `}
 `;
 
@@ -59,6 +59,9 @@ const Steps = styled.p`
 const Bottom = styled(Box)`
   border-top: 1px solid #e9eef4;
   padding: 3rem 0;
+  ${({theme}) => theme.mq.md`
+   padding: 2rem 0;
+`}
 `;
 
 const TabTitle = styled.h1`

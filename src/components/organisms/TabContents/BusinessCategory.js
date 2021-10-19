@@ -4,11 +4,25 @@ import {Select} from 'components/atoms/Forms/Select';
 import {SelectButton} from 'components/atoms/Buttons/SelectButton';
 import styled from '@emotion/styled';
 
+const Container = styled(Box)`
+  margin-bottom: 4.5rem;
+  ${({theme}) => theme.mq.md`
+  margin-bottom: 2rem;
+`}
+`;
+
 const Title = styled.p`
   margin-bottom: 0.5rem;
   color: ${({theme}) => theme.colors.black};
   font-size: 12px;
   font-weight: 500;
+`;
+
+const FirstSelector = styled(Box)`
+  margin-right: 10rem;
+  ${({theme}) => theme.mq.md`
+  margin-right: 1rem;
+`}
 `;
 
 export const BusinessCategory = () => {
@@ -17,13 +31,16 @@ export const BusinessCategory = () => {
     setIsActive((v) => !v);
   };
   return (
-    <Box marginBottom='4.5rem'>
+    <Container>
       <Box
         display='flex'
         justifyContent='space-between'
         marginTop='5rem'
       >
-        <Box width='100%' marginRight='10rem'>
+        <FirstSelector
+          width='100%'
+          marginRight='10rem'
+        >
           <Select title='Type of your business'>
             <option
               value='Select a bank'
@@ -45,7 +62,7 @@ export const BusinessCategory = () => {
               Cooperative (Co-op)
             </option>
           </Select>
-        </Box>
+        </FirstSelector>
         <Box width='100%'>
           <Select title='Business Category'>
             <option
@@ -94,6 +111,6 @@ export const BusinessCategory = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </Container>
   );
 };

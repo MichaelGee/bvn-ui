@@ -24,6 +24,13 @@ const Title = styled.p`
   margin-bottom: 0.5rem;
 `;
 
+const CollapseContainer = styled(Box)`
+  margin-bottom: 5rem;
+  ${({theme}) => theme.mq.md`
+  margin-bottom: 2rem;
+`}
+`;
+
 const TabPanelContainer = styled.div``;
 
 export const VerifyAccountTab = () => {
@@ -89,9 +96,9 @@ export const VerifyAccountTab = () => {
           </Box>
         </TabPanel>
       </TabPanelContainer>
-      <Box marginTop='3rem' marginBottom='5rem'>
+      <CollapseContainer marginTop='3rem'>
         <Collapse />
-      </Box>
+      </CollapseContainer>
     </Box>
   );
 };
