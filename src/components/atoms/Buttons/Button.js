@@ -17,8 +17,9 @@ export const Button = styled.button`
   ${({small}) =>
     small &&
     css`
-      padding: 0.6rem 1.5rem;
+      padding: 0.6rem 1.5rem !important;
       border-radius: 3.1px;
+      line-height: 22px !important;
     `}
   ${({outline}) =>
     outline &&
@@ -26,4 +27,10 @@ export const Button = styled.button`
       background: #e4e9ef;
       color: #a5b4cb;
     `}
+
+    ${({theme}) => theme.mq.md`
+      font-size: 12px;
+      padding: 1.2rem 2rem;
+      line-height: 17px;
+`}
 `;

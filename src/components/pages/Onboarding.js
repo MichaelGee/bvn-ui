@@ -13,12 +13,12 @@ import {SocialHandles} from 'components/organisms/TabContents/SocialHandles';
 import {BusinessCategory} from 'components/organisms/TabContents/BusinessCategory';
 
 const Image = styled.img`
-  width: 80rem;
+  width: 100%;
 `;
 
 const Left = styled(Box)`
   background: ${({theme}) => theme.colors.cream};
-  height: 100%;
+  height: auto;
   padding: 2rem 10rem;
   display: flex;
   align-items: center;
@@ -26,11 +26,17 @@ const Left = styled(Box)`
   img {
     margin-top: 8rem;
   }
+  ${({theme}) => theme.mq.lg`
+    display: none
+`}
 `;
 
 const Right = styled(Box)`
   width: 100%;
   padding: 6rem 10rem;
+  ${({theme}) => theme.mq.lg`
+    padding: 4rem 3rem;
+  `}
 `;
 
 const TabsContainer = styled.div`
@@ -60,6 +66,9 @@ const TabTitle = styled.h1`
   line-height: 34px;
   color: ${({theme}) => theme.colors.black};
   font-weight: bold;
+  ${({theme}) => theme.mq.md`
+  font-size: 22px;
+`}
 `;
 
 const Onboarding = () => {

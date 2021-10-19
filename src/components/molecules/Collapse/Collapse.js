@@ -17,12 +17,12 @@ const Container = styled.div`
 const QuestionText = styled.p`
   color: ${({theme}) => theme.colors.black};
   margin-left: 1rem;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
 `;
 const HideText = styled.p`
   color: ${({theme}) => theme.colors.purple};
-  font-size: 9px;
+  font-size: 12px;
   margin-right: 0.5rem;
   line-height: 12px;
   font-weight: 500;
@@ -35,7 +35,7 @@ const ButtomSection = styled.div`
 const BodyText = styled.p`
   color: ${({theme}) => theme.colors.black};
   opacity: 0.7;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
   font-weight: normal;
   margin-bottom: 1rem;
@@ -47,7 +47,7 @@ const BodyText = styled.p`
 const Footer = styled.div`
   color: ${({theme}) => theme.colors.black};
   font-weight: normal;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 15px;
   padding-top: 1.2rem;
   margin-top: 2rem;

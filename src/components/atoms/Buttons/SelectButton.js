@@ -17,4 +17,7 @@ export const SelectButton = styled.button`
   color: ${({theme}) => theme.colors.black};
   font-weight: 500;
   cursor: pointer;
+  ${({theme}) => theme.mq.md`
+     font-size: 10px;
+`}
 `;

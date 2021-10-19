@@ -11,28 +11,42 @@ const Title = styled.p`
   margin-top: 1rem;
 `;
 
+const Instagram = styled(Box)`
+  margin-right: 10rem;
+  ${({theme}) => theme.mq.md`
+    margin-right: 1rem;
+  `}
+`;
+
+const Abeg = styled(Box)`
+  width: 45%;
+  ${({theme}) => theme.mq.md`
+    width: 100%;
+  `}
+`;
+
 export const SocialHandles = () => {
   return (
     <Box marginBottom='4.5rem'>
       <Title>
         Enter your business social media handles
       </Title>
-      <Box width='45%' marginBottom='4rem'>
+      <Abeg width='45%' marginBottom='4rem'>
         <Input
           placeholder='@'
           title='Choose your Abeg Tag (required)'
         />
-      </Box>
+      </Abeg>
       <Box
         display='flex'
         justifyContent='space-between'
       >
-        <Box width='100%' marginRight='10rem'>
+        <Instagram width='100%'>
           <Input
             placeholder='@'
             title='Instagram'
           />
-        </Box>
+        </Instagram>
         <Box width='100%'>
           <Input
             placeholder='@'

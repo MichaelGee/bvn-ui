@@ -28,12 +28,14 @@ const Title = styled.p`
 export const Input = ({
   placeholder,
   title,
+  type,
   props,
 }) => {
   return (
     <Box width='100%'>
       <Title>{title}</Title>
       <InputComponent
+        type={type}
         placeholder={placeholder}
         {...props}
       />

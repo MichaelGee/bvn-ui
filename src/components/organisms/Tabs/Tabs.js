@@ -8,6 +8,7 @@ import {
   StyledTabPanel,
   TabsHolder,
   TabTitle,
+  TabBox,
 } from './styled';
 
 export const Tab = ({
@@ -17,10 +18,9 @@ export const Tab = ({
   onClick,
 }) => {
   return (
-    <Box
+    <TabBox
       display='flex'
       alignItems='center'
-      marginRight='5rem'
       onClick={onClick}
       cursor='pointer'
     >
@@ -33,7 +33,7 @@ export const Tab = ({
         {label}
       </Button>
       <TabTitle active={active}>{text}</TabTitle>
-    </Box>
+    </TabBox>
   );
 };
 

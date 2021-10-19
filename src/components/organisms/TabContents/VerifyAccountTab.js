@@ -53,7 +53,10 @@ export const VerifyAccountTab = () => {
           value={activeTab}
           selectedIndex={0}
         >
-          <Input title='Bank Verification Number (11-digits)' />
+          <Input
+            type='number'
+            title='Bank Verification Number (11-digits)'
+          />
         </TabPanel>
         <TabPanel
           value={activeTab}
@@ -64,7 +67,10 @@ export const VerifyAccountTab = () => {
             justifyContent='space-between'
           >
             <Box width='80%' marginRight='10rem'>
-              <Input title='Account Number' />
+              <Input
+                type='number'
+                title='Account Number'
+              />
             </Box>
             <Box width='80%'>
               <Select title='Select Bank'>

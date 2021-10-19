@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import {css, keyframes} from '@emotion/react';
+import Box from 'ui-box';
 
 const inset = keyframes`
   0% {
@@ -75,4 +76,17 @@ export const TabTitle = styled.p`
   font-size: 18px;
   line-height: 23px;
   margin-left: 1rem;
+  ${({theme}) => theme.mq.lg`
+  font-size: 13px;
+`}
+  ${({theme}) => theme.mq.md`
+   font-size: 10px;
+`}
+`;
+
+export const TabBox = styled(Box)`
+  margin-right: 5rem;
+  ${({theme}) => theme.mq.lg`
+   margin-right: 4rem;
+`}
 `;
