@@ -8,8 +8,10 @@ const InputComponent = styled.input`
     ${({theme}) => theme.colors.gray02};
   padding: 12px 17px;
   border-radius: 12px;
+  font-weight: 400;
+  line-height: 22px;
   font-size: 1.5rem;
-  color: ${({theme}) => theme.colors.black};
+  color: ${({theme}) => theme.colors.gray04};
   &:focus {
     border: 1px solid
       ${({theme}) => theme.colors.blue};

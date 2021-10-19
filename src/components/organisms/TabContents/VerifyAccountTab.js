@@ -71,9 +71,7 @@ export const VerifyAccountTab = () => {
                 <option
                   value='Select a bank'
                   defaultValue=''
-                >
-                  Select a bank
-                </option>
+                ></option>
                 <option value='gtbank'>
                   GtBank
                 </option>

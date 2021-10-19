@@ -11,6 +11,8 @@ import {
   ButtonTab,
 } from 'components/organisms/Tabs/Tabs';
 import {VerifyAccountTab} from 'components/organisms/TabContents/VerifyAccountTab';
+import {SocialHandles} from 'components/organisms/TabContents/SocialHandles';
+import {BusinessCategory} from 'components/organisms/TabContents/BusinessCategory';
 
 const Image = styled.img`
   width: 80rem;
@@ -42,7 +44,7 @@ const TabsContainer = styled.div`
 const TabPanelContainer = styled.div``;
 
 const Steps = styled.p`
-  color: ${({theme}) => theme.colors.gray3};
+  color: ${({theme}) => theme.colors.gray03};
   font-size: 13px;
   line-height: 17px;
   font-weight: 200;
@@ -89,6 +91,19 @@ const Onboarding = () => {
         return 2;
       case 2:
         return 3;
+      default:
+        break;
+    }
+  };
+
+  const changeButtonText = () => {
+    switch (activeTab) {
+      case 0:
+        return 'Continue';
+      case 1:
+        return 'Confirm Social Handles';
+      case 2:
+        return 'Complete';
       default:
         break;
     }
@@ -148,13 +163,13 @@ const Onboarding = () => {
             value={activeTab}
             selectedIndex={1}
           >
-            <h1>Tab 2</h1>
+            <SocialHandles />
           </TabPanel>
           <TabPanel
             value={activeTab}
             selectedIndex={2}
           >
-            <h1>Tab 3</h1>
+            <BusinessCategory />
           </TabPanel>
         </TabPanelContainer>
         <Bottom
@@ -162,7 +177,9 @@ const Onboarding = () => {
           justifyContent='space-between'
         >
           <Box />
-          <Button color='blue'>Continue</Button>
+          <Button color='blue'>
+            {changeButtonText()}
+          </Button>
         </Bottom>
       </Right>
     </Box>
