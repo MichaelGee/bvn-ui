@@ -2,13 +2,11 @@ import React, {useState} from 'react';
 import Box from 'ui-box';
 import Hand from '../../assets/images/hand.png';
 import styled from '@emotion/styled';
-import {Collapse} from 'components/molecules/Collapse/Collapse';
 import {Button} from 'components/atoms/Buttons/Button';
 import {
   Tabs,
   Tab,
   TabPanel,
-  ButtonTab,
 } from 'components/organisms/Tabs/Tabs';
 import {VerifyAccountTab} from 'components/organisms/TabContents/VerifyAccountTab';
 import {SocialHandles} from 'components/organisms/TabContents/SocialHandles';

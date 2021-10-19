@@ -29,9 +29,20 @@ export const BusinessCategory = () => {
               value='Select a bank'
               defaultValue=''
             ></option>
-            <option value='gtbank'>GtBank</option>
-            <option value='acccess'>
-              Access Bank
+            <option value='sole'>
+              Sole Proprietorship
+            </option>
+            <option value='partnership'>
+              Partnership
+            </option>
+            <option value='corporation'>
+              Corporation
+            </option>
+            <option value='lcc'>
+              Limited Liability Company (LLC)
+            </option>
+            <option value='cooperative'>
+              Cooperative (Co-op)
             </option>
           </Select>
         </Box>
@@ -41,9 +52,20 @@ export const BusinessCategory = () => {
               value='Select a bank'
               defaultValue=''
             ></option>
-            <option value='gtbank'>GtBank</option>
-            <option value='acccess'>
-              Access Bank
+            <option value='retailer'>
+              Retailer
+            </option>
+            <option value='food-service'>
+              Food Service
+            </option>
+            <option value='manufacturer'>
+              Manufacturer
+            </option>
+            <option value='food-service'>
+              Food Service
+            </option>
+            <option value='health-practitioner'>
+              Health Practitioner
             </option>
           </Select>
         </Box>
