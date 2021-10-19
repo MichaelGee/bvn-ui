@@ -87,6 +87,6 @@ export const TabTitle = styled.p`
 export const TabBox = styled(Box)`
   margin-right: 5rem;
   ${({theme}) => theme.mq.lg`
-   margin-right: 4rem;
+   margin-right: 3rem;
 `}
 `;
