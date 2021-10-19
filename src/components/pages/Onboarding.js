@@ -35,7 +35,7 @@ const Right = styled(Box)`
   width: 100%;
   padding: 6rem 10rem;
   ${({theme}) => theme.mq.lg`
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
   `}
 `;
 
