@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   Tabs,
   ButtonTab,
@@ -9,6 +9,10 @@ import {Collapse} from 'components/molecules/Collapse/Collapse';
 import Box from 'ui-box';
 import {Input} from 'components/atoms/Forms/Input';
 import {Select} from 'components/atoms/Forms/Select';
+import {
+  validateBVN,
+  validateAccNumber,
+} from '../../../util';
 
 const TabsContainer = styled.div`
   display: flex;
@@ -35,9 +39,56 @@ const TabPanelContainer = styled.div``;
 
 export const VerifyAccountTab = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [account, setAccount] = useState('');
+  const [bvn, setBvn] = useState('');
+  const [
+    accountError,
+    setAccountError,
+  ] = useState(false);
+  const [bvnError, setBvnError] = useState(false);
+
+  const onAccountChange = (e) => {
+    e.preventDefault();
+    setAccount(e.target.value);
+  };
+
+  const onBVNChange = (e) => {
+    e.preventDefault();
+    setBvn(e.target.value);
+  };
+
   const handleChange = (e, value) => {
     setActiveTab(value);
   };
+
+  const validateBVNNumber = () => {
+    if (bvn.length > 0 && !validateBVN(bvn)) {
+      setBvnError(true);
+    } else {
+      setBvnError(false);
+    }
+  };
+
+  const validateAccount = () => {
+    if (
+      bvn.length > 0 &&
+      !validateAccNumber(account)
+    ) {
+      setAccountError(true);
+    } else {
+      setAccountError(false);
+    }
+  };
+
+  useEffect(() => {
+    validateBVNNumber();
+    // eslint-disable-next-line
+  }, [bvn]);
+  useEffect(() => {
+    validateAccount();
+    // eslint-disable-next-line
+  }, [account]);
+
   return (
     <Box>
       <TabsContainer>
@@ -61,8 +112,11 @@ export const VerifyAccountTab = () => {
           selectedIndex={0}
         >
           <Input
+            error={bvnError}
             type='number'
             title='Bank Verification Number (11-digits)'
+            value={bvn}
+            onChange={onBVNChange}
           />
         </TabPanel>
         <TabPanel
@@ -75,8 +129,11 @@ export const VerifyAccountTab = () => {
           >
             <Box width='80%' marginRight='10rem'>
               <Input
+                error={accountError}
                 type='number'
                 title='Account Number'
+                value={account}
+                onChange={onAccountChange}
               />
             </Box>
             <Box width='80%'>

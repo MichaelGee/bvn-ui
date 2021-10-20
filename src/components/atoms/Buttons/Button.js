@@ -9,7 +9,7 @@ export const Button = styled.button`
   line-height: 22px;
   background: ${(props) =>
     props.theme.colors[props.color]};
-  border-radius: 8px;
+  border-radius: 10px;
   color: ${({theme}) => theme.colors.white};
   font-weight: 500;
   cursor: pointer;

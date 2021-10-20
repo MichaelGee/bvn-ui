@@ -3,6 +3,7 @@ import globalStyle from './GlobalStyles';
 import Router from './Router';
 import {ThemeProvider} from '@emotion/react';
 import {theme} from 'theme';
+import './App.css';
 
 function App() {
   return (

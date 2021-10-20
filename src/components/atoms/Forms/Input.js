@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Box from 'ui-box';
+import css from '@emotion/css';
 
 const InputComponent = styled.input`
   width: 100%;
+  outline: none;
   border: 1px solid
     ${({theme}) => theme.colors.gray02};
   padding: 12px 17px;
@@ -12,10 +14,11 @@ const InputComponent = styled.input`
   line-height: 22px;
   font-size: 1.5rem;
   color: ${({theme}) => theme.colors.gray04};
-  &:focus {
-    border: 1px solid
-      ${({theme}) => theme.colors.blue};
-  }
+  ${({error}) =>
+    error &&
+    css`
+      border: 1px solid #ff6774;
+    `}
 `;
 
 const Title = styled.p`
@@ -29,13 +32,17 @@ export const Input = ({
   placeholder,
   title,
   type,
+  error,
+  onChange,
   props,
 }) => {
   return (
     <Box width='100%'>
       <Title>{title}</Title>
       <InputComponent
+        error={error}
         type={type}
+        onChange={onChange}
         placeholder={placeholder}
         {...props}
       />
